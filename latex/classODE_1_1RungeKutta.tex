@@ -1,0 +1,99 @@
+\hypertarget{classODE_1_1RungeKutta}{}\section{O\+DE\+::Runge\+Kutta Sınıf Referans}
+\label{classODE_1_1RungeKutta}\index{ODE::RungeKutta@{ODE::RungeKutta}}
+
+
+{\ttfamily \#include $<$Runge\+Kutta.\+h$>$}
+
+O\+DE\+::Runge\+Kutta için kalıtım şeması\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classODE_1_1RungeKutta}
+\end{center}
+\end{figure}
+\subsection*{Public Üye Fonksiyonlar}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classODE_1_1RungeKutta_ae19a22749e715723cb1414ece5f7bd88}{Runge\+Kutta}} ()
+\item 
+virtual \mbox{\hyperlink{classODE_1_1RungeKutta_ac1514d8b68d46e1cc51dfa1f52003af0}{$\sim$\+Runge\+Kutta}} ()
+\end{DoxyCompactItemize}
+\subsection*{Korumalı Üye Fonksiyonlar}
+\begin{DoxyCompactItemize}
+\item 
+virtual Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classODE_1_1RungeKutta_a545126adbad4dcf9294cc2623117edab}{update\+Function}} () override
+\end{DoxyCompactItemize}
+\subsection*{Korumalı Özellikler(attribute)}
+\begin{DoxyCompactItemize}
+\item 
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classODE_1_1RungeKutta_ac19d5705a3f6b4bb3afc733cc3ae6e12}{k1\+\_\+}}
+\item 
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classODE_1_1RungeKutta_a001c906e3a7ae731bf77e60a35b5258c}{k2\+\_\+}}
+\item 
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classODE_1_1RungeKutta_a5231484792516296abbd6b14a63f25e4}{k3\+\_\+}}
+\item 
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classODE_1_1RungeKutta_a1dc77bd2fb304d6c1d5d77894257f174}{k4\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Dokümantasyonu}
+\mbox{\Hypertarget{classODE_1_1RungeKutta_ae19a22749e715723cb1414ece5f7bd88}\label{classODE_1_1RungeKutta_ae19a22749e715723cb1414ece5f7bd88}} 
+\index{ODE::RungeKutta@{ODE::RungeKutta}!RungeKutta@{RungeKutta}}
+\index{RungeKutta@{RungeKutta}!ODE::RungeKutta@{ODE::RungeKutta}}
+\subsubsection{\texorpdfstring{RungeKutta()}{RungeKutta()}}
+{\footnotesize\ttfamily O\+D\+E\+::\+Runge\+Kutta\+::\+Runge\+Kutta (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Runge-\/\+Kutta A\+TD çözücü yapıcısı \mbox{\Hypertarget{classODE_1_1RungeKutta_ac1514d8b68d46e1cc51dfa1f52003af0}\label{classODE_1_1RungeKutta_ac1514d8b68d46e1cc51dfa1f52003af0}} 
+\index{ODE::RungeKutta@{ODE::RungeKutta}!````~RungeKutta@{$\sim$RungeKutta}}
+\index{````~RungeKutta@{$\sim$RungeKutta}!ODE::RungeKutta@{ODE::RungeKutta}}
+\subsubsection{\texorpdfstring{$\sim$RungeKutta()}{~RungeKutta()}}
+{\footnotesize\ttfamily O\+D\+E\+::\+Runge\+Kutta\+::$\sim$\+Runge\+Kutta (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Runge-\/\+Kutta A\+TD çözücü yıkıcısı 
+
+\subsection{Üye Fonksiyon Dokümantasyonu}
+\mbox{\Hypertarget{classODE_1_1RungeKutta_a545126adbad4dcf9294cc2623117edab}\label{classODE_1_1RungeKutta_a545126adbad4dcf9294cc2623117edab}} 
+\index{ODE::RungeKutta@{ODE::RungeKutta}!updateFunction@{updateFunction}}
+\index{updateFunction@{updateFunction}!ODE::RungeKutta@{ODE::RungeKutta}}
+\subsubsection{\texorpdfstring{updateFunction()}{updateFunction()}}
+{\footnotesize\ttfamily Eigen\+::\+Vector\+Xd O\+D\+E\+::\+Runge\+Kutta\+::update\+Function (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\[ k_1 = \Delta t f(t,x) \] \[ k_2 = \Delta t f(t+\Delta t/2,x+k_1/2) \] \[ k_3 = \Delta t f(t+\Delta t/2,x+k_2/2) \] \[ k_4 = \Delta t f(t+\Delta t,x+k_3) \] \[ \Delta x = k_1 + 2 k_2 + 2 k_3 + k_4 \] \begin{DoxyReturn}{Döndürdüğü değer}
+\{\} 
+\end{DoxyReturn}
+
+
+Şu üyeleri yeniden tanımlar \+: \mbox{\hyperlink{classODE_1_1OdeSolver_a000187013258d0b43ffd8a14486e7ab8}{O\+D\+E\+::\+Ode\+Solver}}.
+
+
+
+\subsection{Üye Veri Dokümantasyonu}
+\mbox{\Hypertarget{classODE_1_1RungeKutta_ac19d5705a3f6b4bb3afc733cc3ae6e12}\label{classODE_1_1RungeKutta_ac19d5705a3f6b4bb3afc733cc3ae6e12}} 
+\index{ODE::RungeKutta@{ODE::RungeKutta}!k1\_@{k1\_}}
+\index{k1\_@{k1\_}!ODE::RungeKutta@{ODE::RungeKutta}}
+\subsubsection{\texorpdfstring{k1\_}{k1\_}}
+{\footnotesize\ttfamily Eigen\+::\+Vector\+Xd O\+D\+E\+::\+Runge\+Kutta\+::k1\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classODE_1_1RungeKutta_a001c906e3a7ae731bf77e60a35b5258c}\label{classODE_1_1RungeKutta_a001c906e3a7ae731bf77e60a35b5258c}} 
+\index{ODE::RungeKutta@{ODE::RungeKutta}!k2\_@{k2\_}}
+\index{k2\_@{k2\_}!ODE::RungeKutta@{ODE::RungeKutta}}
+\subsubsection{\texorpdfstring{k2\_}{k2\_}}
+{\footnotesize\ttfamily Eigen\+::\+Vector\+Xd O\+D\+E\+::\+Runge\+Kutta\+::k2\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classODE_1_1RungeKutta_a5231484792516296abbd6b14a63f25e4}\label{classODE_1_1RungeKutta_a5231484792516296abbd6b14a63f25e4}} 
+\index{ODE::RungeKutta@{ODE::RungeKutta}!k3\_@{k3\_}}
+\index{k3\_@{k3\_}!ODE::RungeKutta@{ODE::RungeKutta}}
+\subsubsection{\texorpdfstring{k3\_}{k3\_}}
+{\footnotesize\ttfamily Eigen\+::\+Vector\+Xd O\+D\+E\+::\+Runge\+Kutta\+::k3\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classODE_1_1RungeKutta_a1dc77bd2fb304d6c1d5d77894257f174}\label{classODE_1_1RungeKutta_a1dc77bd2fb304d6c1d5d77894257f174}} 
+\index{ODE::RungeKutta@{ODE::RungeKutta}!k4\_@{k4\_}}
+\index{k4\_@{k4\_}!ODE::RungeKutta@{ODE::RungeKutta}}
+\subsubsection{\texorpdfstring{k4\_}{k4\_}}
+{\footnotesize\ttfamily Eigen\+::\+Vector\+Xd O\+D\+E\+::\+Runge\+Kutta\+::k4\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Bu sınıf için dokümantasyon aşağıdaki dosyalardan üretilmiştir\+:\begin{DoxyCompactItemize}
+\item 
+ode\+\_\+solver/include/ode\+\_\+solver/\mbox{\hyperlink{RungeKutta_8h}{Runge\+Kutta.\+h}}\item 
+ode\+\_\+solver/src/\mbox{\hyperlink{RungeKutta_8cpp}{Runge\+Kutta.\+cpp}}\end{DoxyCompactItemize}

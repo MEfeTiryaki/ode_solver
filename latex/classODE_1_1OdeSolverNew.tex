@@ -1,0 +1,189 @@
+\hypertarget{classODE_1_1OdeSolverNew}{}\section{O\+DE\+::Ode\+Solver\+New Sınıf Referans}
+\label{classODE_1_1OdeSolverNew}\index{ODE::OdeSolverNew@{ODE::OdeSolverNew}}
+
+
+{\ttfamily \#include $<$Ode\+Solver\+New.\+h$>$}
+
+O\+DE\+::Ode\+Solver\+New için kalıtım şeması\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classODE_1_1OdeSolverNew}
+\end{center}
+\end{figure}
+\subsection*{Public Üye Fonksiyonlar}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classODE_1_1OdeSolverNew_aa23301e84c4ad9534f17d0ed2ee34885}{Ode\+Solver\+New}} ()
+\item 
+virtual \mbox{\hyperlink{classODE_1_1OdeSolverNew_ab16d80c242ea607eff477e4185a0e251}{$\sim$\+Ode\+Solver\+New}} ()
+\item 
+void \mbox{\hyperlink{classODE_1_1OdeSolverNew_a29b1128975493962d19e5942c816ae10}{init}} (std\+::function$<$ Eigen\+::\+Vector\+Xd(double, Eigen\+::\+Vector\+Xd)$>$ F)
+\item 
+void \mbox{\hyperlink{classODE_1_1OdeSolverNew_a740f131b3bfb6ba957e33eeaae17ed64}{start}} (Eigen\+::\+Vector\+Xd initial\+Value, double max\+Time, int step\+Number)
+\item 
+void \mbox{\hyperlink{classODE_1_1OdeSolverNew_ac9286a3fd8b7878f86e6ab7619c8767d}{solve}} ()
+\item 
+void \mbox{\hyperlink{classODE_1_1OdeSolverNew_aa400dce714b55dc56b37e35f8f8ed89d}{set\+Real\+Time\+Factor}} (double factor)
+\item 
+virtual Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classODE_1_1OdeSolverNew_ad2ccef6789f3616ca6b277a77deb62f9}{update\+Equation}} ()
+\item 
+std\+::vector$<$ Eigen\+::\+Vector\+Xd $>$ \mbox{\hyperlink{classODE_1_1OdeSolverNew_abd229873b1f8d7edf1d00188b95c35e6}{get\+Buffer}} (double t)
+\end{DoxyCompactItemize}
+\subsection*{Korumalı Özellikler(attribute)}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classODE_1_1OdeSolverNew_a1ca38257d9d238d5e0afe568c050d397}{step\+Size\+\_\+}}
+\item 
+double \mbox{\hyperlink{classODE_1_1OdeSolverNew_a1b7d7ad92434fb7a3d2ecf581020e06c}{current\+Time\+\_\+}}
+\item 
+int \mbox{\hyperlink{classODE_1_1OdeSolverNew_af6cb50125ff1ab68003b9c3f62a6c0d2}{time\+Step\+\_\+}}
+\item 
+int \mbox{\hyperlink{classODE_1_1OdeSolverNew_abaaa8945496558e050fbe0e4919e5bd3}{max\+Time\+Step\+\_\+}}
+\item 
+double \mbox{\hyperlink{classODE_1_1OdeSolverNew_ab30a52a591310e18d7dd83d026cd10ae}{real\+Time\+Factor\+\_\+}}
+\item 
+int \mbox{\hyperlink{classODE_1_1OdeSolverNew_ad39a66a0929b310f32694cf048f0a041}{n\+\_\+}}
+\item 
+std\+::vector$<$ Eigen\+::\+Vector\+Xd $>$ \mbox{\hyperlink{classODE_1_1OdeSolverNew_abe214c99e8c6e1684c67622b2c0516b4}{buffer\+\_\+}}
+\item 
+std\+::function$<$ Eigen\+::\+Vector\+Xd(double, Eigen\+::\+Vector\+Xd)$>$ \mbox{\hyperlink{classODE_1_1OdeSolverNew_a953bdfee34ff013ecfb475579d8be08d}{F\+\_\+}}
+\item 
+boost\+::thread $\ast$ \mbox{\hyperlink{classODE_1_1OdeSolverNew_a62079063cd8a49e2b8119ffd5c37707f}{worker\+Thread\+\_\+}}
+\item 
+boost\+::mutex \mbox{\hyperlink{classODE_1_1OdeSolverNew_a5561c9beedfbb19cd3b1d7019cacc699}{worker\+Mutex\+\_\+}}
+\item 
+boost\+::chrono\+::system\+\_\+clock\+::time\+\_\+point \mbox{\hyperlink{classODE_1_1OdeSolverNew_a8afcf4e7ebd01c856a14a20ad2ca4b17}{start\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Dokümantasyonu}
+\mbox{\Hypertarget{classODE_1_1OdeSolverNew_aa23301e84c4ad9534f17d0ed2ee34885}\label{classODE_1_1OdeSolverNew_aa23301e84c4ad9534f17d0ed2ee34885}} 
+\index{ODE::OdeSolverNew@{ODE::OdeSolverNew}!OdeSolverNew@{OdeSolverNew}}
+\index{OdeSolverNew@{OdeSolverNew}!ODE::OdeSolverNew@{ODE::OdeSolverNew}}
+\subsubsection{\texorpdfstring{OdeSolverNew()}{OdeSolverNew()}}
+{\footnotesize\ttfamily O\+D\+E\+::\+Ode\+Solver\+New\+::\+Ode\+Solver\+New (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classODE_1_1OdeSolverNew_ab16d80c242ea607eff477e4185a0e251}\label{classODE_1_1OdeSolverNew_ab16d80c242ea607eff477e4185a0e251}} 
+\index{ODE::OdeSolverNew@{ODE::OdeSolverNew}!````~OdeSolverNew@{$\sim$OdeSolverNew}}
+\index{````~OdeSolverNew@{$\sim$OdeSolverNew}!ODE::OdeSolverNew@{ODE::OdeSolverNew}}
+\subsubsection{\texorpdfstring{$\sim$OdeSolverNew()}{~OdeSolverNew()}}
+{\footnotesize\ttfamily O\+D\+E\+::\+Ode\+Solver\+New\+::$\sim$\+Ode\+Solver\+New (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\subsection{Üye Fonksiyon Dokümantasyonu}
+\mbox{\Hypertarget{classODE_1_1OdeSolverNew_abd229873b1f8d7edf1d00188b95c35e6}\label{classODE_1_1OdeSolverNew_abd229873b1f8d7edf1d00188b95c35e6}} 
+\index{ODE::OdeSolverNew@{ODE::OdeSolverNew}!getBuffer@{getBuffer}}
+\index{getBuffer@{getBuffer}!ODE::OdeSolverNew@{ODE::OdeSolverNew}}
+\subsubsection{\texorpdfstring{getBuffer()}{getBuffer()}}
+{\footnotesize\ttfamily std\+::vector$<$ Eigen\+::\+Vector\+Xd $>$ O\+D\+E\+::\+Ode\+Solver\+New\+::get\+Buffer (\begin{DoxyParamCaption}\item[{double}]{t }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classODE_1_1OdeSolverNew_a29b1128975493962d19e5942c816ae10}\label{classODE_1_1OdeSolverNew_a29b1128975493962d19e5942c816ae10}} 
+\index{ODE::OdeSolverNew@{ODE::OdeSolverNew}!init@{init}}
+\index{init@{init}!ODE::OdeSolverNew@{ODE::OdeSolverNew}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void O\+D\+E\+::\+Ode\+Solver\+New\+::init (\begin{DoxyParamCaption}\item[{std\+::function$<$ Eigen\+::\+Vector\+Xd(double, Eigen\+::\+Vector\+Xd)$>$}]{F }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classODE_1_1OdeSolverNew_aa400dce714b55dc56b37e35f8f8ed89d}\label{classODE_1_1OdeSolverNew_aa400dce714b55dc56b37e35f8f8ed89d}} 
+\index{ODE::OdeSolverNew@{ODE::OdeSolverNew}!setRealTimeFactor@{setRealTimeFactor}}
+\index{setRealTimeFactor@{setRealTimeFactor}!ODE::OdeSolverNew@{ODE::OdeSolverNew}}
+\subsubsection{\texorpdfstring{setRealTimeFactor()}{setRealTimeFactor()}}
+{\footnotesize\ttfamily void O\+D\+E\+::\+Ode\+Solver\+New\+::set\+Real\+Time\+Factor (\begin{DoxyParamCaption}\item[{double}]{factor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classODE_1_1OdeSolverNew_ac9286a3fd8b7878f86e6ab7619c8767d}\label{classODE_1_1OdeSolverNew_ac9286a3fd8b7878f86e6ab7619c8767d}} 
+\index{ODE::OdeSolverNew@{ODE::OdeSolverNew}!solve@{solve}}
+\index{solve@{solve}!ODE::OdeSolverNew@{ODE::OdeSolverNew}}
+\subsubsection{\texorpdfstring{solve()}{solve()}}
+{\footnotesize\ttfamily void O\+D\+E\+::\+Ode\+Solver\+New\+::solve (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classODE_1_1OdeSolverNew_a740f131b3bfb6ba957e33eeaae17ed64}\label{classODE_1_1OdeSolverNew_a740f131b3bfb6ba957e33eeaae17ed64}} 
+\index{ODE::OdeSolverNew@{ODE::OdeSolverNew}!start@{start}}
+\index{start@{start}!ODE::OdeSolverNew@{ODE::OdeSolverNew}}
+\subsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void O\+D\+E\+::\+Ode\+Solver\+New\+::start (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector\+Xd}]{initial\+Value,  }\item[{double}]{max\+Time,  }\item[{int}]{step\+Number }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classODE_1_1OdeSolverNew_ad2ccef6789f3616ca6b277a77deb62f9}\label{classODE_1_1OdeSolverNew_ad2ccef6789f3616ca6b277a77deb62f9}} 
+\index{ODE::OdeSolverNew@{ODE::OdeSolverNew}!updateEquation@{updateEquation}}
+\index{updateEquation@{updateEquation}!ODE::OdeSolverNew@{ODE::OdeSolverNew}}
+\subsubsection{\texorpdfstring{updateEquation()}{updateEquation()}}
+{\footnotesize\ttfamily Eigen\+::\+Vector\+Xd O\+D\+E\+::\+Ode\+Solver\+New\+::update\+Equation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Şu üyeler tarafından yeniden tanımlanmıştır \+: \mbox{\hyperlink{classODE_1_1RungeKuttaNew_a9a6722699baa4adc50d10fa5ccc156ed}{O\+D\+E\+::\+Runge\+Kutta\+New}}.
+
+
+
+\subsection{Üye Veri Dokümantasyonu}
+\mbox{\Hypertarget{classODE_1_1OdeSolverNew_abe214c99e8c6e1684c67622b2c0516b4}\label{classODE_1_1OdeSolverNew_abe214c99e8c6e1684c67622b2c0516b4}} 
+\index{ODE::OdeSolverNew@{ODE::OdeSolverNew}!buffer\_@{buffer\_}}
+\index{buffer\_@{buffer\_}!ODE::OdeSolverNew@{ODE::OdeSolverNew}}
+\subsubsection{\texorpdfstring{buffer\_}{buffer\_}}
+{\footnotesize\ttfamily std\+::vector$<$Eigen\+::\+Vector\+Xd$>$ O\+D\+E\+::\+Ode\+Solver\+New\+::buffer\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classODE_1_1OdeSolverNew_a1b7d7ad92434fb7a3d2ecf581020e06c}\label{classODE_1_1OdeSolverNew_a1b7d7ad92434fb7a3d2ecf581020e06c}} 
+\index{ODE::OdeSolverNew@{ODE::OdeSolverNew}!currentTime\_@{currentTime\_}}
+\index{currentTime\_@{currentTime\_}!ODE::OdeSolverNew@{ODE::OdeSolverNew}}
+\subsubsection{\texorpdfstring{currentTime\_}{currentTime\_}}
+{\footnotesize\ttfamily double O\+D\+E\+::\+Ode\+Solver\+New\+::current\+Time\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classODE_1_1OdeSolverNew_a953bdfee34ff013ecfb475579d8be08d}\label{classODE_1_1OdeSolverNew_a953bdfee34ff013ecfb475579d8be08d}} 
+\index{ODE::OdeSolverNew@{ODE::OdeSolverNew}!F\_@{F\_}}
+\index{F\_@{F\_}!ODE::OdeSolverNew@{ODE::OdeSolverNew}}
+\subsubsection{\texorpdfstring{F\_}{F\_}}
+{\footnotesize\ttfamily std\+::function$<$Eigen\+::\+Vector\+Xd(double,Eigen\+::\+Vector\+Xd)$>$ O\+D\+E\+::\+Ode\+Solver\+New\+::\+F\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classODE_1_1OdeSolverNew_abaaa8945496558e050fbe0e4919e5bd3}\label{classODE_1_1OdeSolverNew_abaaa8945496558e050fbe0e4919e5bd3}} 
+\index{ODE::OdeSolverNew@{ODE::OdeSolverNew}!maxTimeStep\_@{maxTimeStep\_}}
+\index{maxTimeStep\_@{maxTimeStep\_}!ODE::OdeSolverNew@{ODE::OdeSolverNew}}
+\subsubsection{\texorpdfstring{maxTimeStep\_}{maxTimeStep\_}}
+{\footnotesize\ttfamily int O\+D\+E\+::\+Ode\+Solver\+New\+::max\+Time\+Step\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classODE_1_1OdeSolverNew_ad39a66a0929b310f32694cf048f0a041}\label{classODE_1_1OdeSolverNew_ad39a66a0929b310f32694cf048f0a041}} 
+\index{ODE::OdeSolverNew@{ODE::OdeSolverNew}!n\_@{n\_}}
+\index{n\_@{n\_}!ODE::OdeSolverNew@{ODE::OdeSolverNew}}
+\subsubsection{\texorpdfstring{n\_}{n\_}}
+{\footnotesize\ttfamily int O\+D\+E\+::\+Ode\+Solver\+New\+::n\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classODE_1_1OdeSolverNew_ab30a52a591310e18d7dd83d026cd10ae}\label{classODE_1_1OdeSolverNew_ab30a52a591310e18d7dd83d026cd10ae}} 
+\index{ODE::OdeSolverNew@{ODE::OdeSolverNew}!realTimeFactor\_@{realTimeFactor\_}}
+\index{realTimeFactor\_@{realTimeFactor\_}!ODE::OdeSolverNew@{ODE::OdeSolverNew}}
+\subsubsection{\texorpdfstring{realTimeFactor\_}{realTimeFactor\_}}
+{\footnotesize\ttfamily double O\+D\+E\+::\+Ode\+Solver\+New\+::real\+Time\+Factor\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classODE_1_1OdeSolverNew_a8afcf4e7ebd01c856a14a20ad2ca4b17}\label{classODE_1_1OdeSolverNew_a8afcf4e7ebd01c856a14a20ad2ca4b17}} 
+\index{ODE::OdeSolverNew@{ODE::OdeSolverNew}!start\_@{start\_}}
+\index{start\_@{start\_}!ODE::OdeSolverNew@{ODE::OdeSolverNew}}
+\subsubsection{\texorpdfstring{start\_}{start\_}}
+{\footnotesize\ttfamily boost\+::chrono\+::system\+\_\+clock\+::time\+\_\+point O\+D\+E\+::\+Ode\+Solver\+New\+::start\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classODE_1_1OdeSolverNew_a1ca38257d9d238d5e0afe568c050d397}\label{classODE_1_1OdeSolverNew_a1ca38257d9d238d5e0afe568c050d397}} 
+\index{ODE::OdeSolverNew@{ODE::OdeSolverNew}!stepSize\_@{stepSize\_}}
+\index{stepSize\_@{stepSize\_}!ODE::OdeSolverNew@{ODE::OdeSolverNew}}
+\subsubsection{\texorpdfstring{stepSize\_}{stepSize\_}}
+{\footnotesize\ttfamily double O\+D\+E\+::\+Ode\+Solver\+New\+::step\+Size\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classODE_1_1OdeSolverNew_af6cb50125ff1ab68003b9c3f62a6c0d2}\label{classODE_1_1OdeSolverNew_af6cb50125ff1ab68003b9c3f62a6c0d2}} 
+\index{ODE::OdeSolverNew@{ODE::OdeSolverNew}!timeStep\_@{timeStep\_}}
+\index{timeStep\_@{timeStep\_}!ODE::OdeSolverNew@{ODE::OdeSolverNew}}
+\subsubsection{\texorpdfstring{timeStep\_}{timeStep\_}}
+{\footnotesize\ttfamily int O\+D\+E\+::\+Ode\+Solver\+New\+::time\+Step\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classODE_1_1OdeSolverNew_a5561c9beedfbb19cd3b1d7019cacc699}\label{classODE_1_1OdeSolverNew_a5561c9beedfbb19cd3b1d7019cacc699}} 
+\index{ODE::OdeSolverNew@{ODE::OdeSolverNew}!workerMutex\_@{workerMutex\_}}
+\index{workerMutex\_@{workerMutex\_}!ODE::OdeSolverNew@{ODE::OdeSolverNew}}
+\subsubsection{\texorpdfstring{workerMutex\_}{workerMutex\_}}
+{\footnotesize\ttfamily boost\+::mutex O\+D\+E\+::\+Ode\+Solver\+New\+::worker\+Mutex\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classODE_1_1OdeSolverNew_a62079063cd8a49e2b8119ffd5c37707f}\label{classODE_1_1OdeSolverNew_a62079063cd8a49e2b8119ffd5c37707f}} 
+\index{ODE::OdeSolverNew@{ODE::OdeSolverNew}!workerThread\_@{workerThread\_}}
+\index{workerThread\_@{workerThread\_}!ODE::OdeSolverNew@{ODE::OdeSolverNew}}
+\subsubsection{\texorpdfstring{workerThread\_}{workerThread\_}}
+{\footnotesize\ttfamily boost\+::thread$\ast$ O\+D\+E\+::\+Ode\+Solver\+New\+::worker\+Thread\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Bu sınıf için dokümantasyon aşağıdaki dosyalardan üretilmiştir\+:\begin{DoxyCompactItemize}
+\item 
+ode\+\_\+solver/include/ode\+\_\+solver/\mbox{\hyperlink{OdeSolverNew_8h}{Ode\+Solver\+New.\+h}}\item 
+ode\+\_\+solver/src/\mbox{\hyperlink{OdeSolverNew_8cpp}{Ode\+Solver\+New.\+cpp}}\end{DoxyCompactItemize}

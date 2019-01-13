@@ -1,0 +1,251 @@
+\hypertarget{classODE_1_1OdeSolver}{}\section{O\+DE\+::Ode\+Solver Sınıf Referans}
+\label{classODE_1_1OdeSolver}\index{ODE::OdeSolver@{ODE::OdeSolver}}
+
+
+{\ttfamily \#include $<$Ode\+Solver.\+h$>$}
+
+O\+DE\+::Ode\+Solver için kalıtım şeması\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classODE_1_1OdeSolver}
+\end{center}
+\end{figure}
+\subsection*{Public Üye Fonksiyonlar}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classODE_1_1OdeSolver_a8a1e1a4d7d4eec40090e95a40f0da601}{Ode\+Solver}} ()
+\item 
+virtual \mbox{\hyperlink{classODE_1_1OdeSolver_a40eb1af84fe4849368b7957f33eee14c}{$\sim$\+Ode\+Solver}} ()
+\item 
+void \mbox{\hyperlink{classODE_1_1OdeSolver_a70787647e9c8637197d5c442b7655a05}{initilize}} (Eigen\+::\+Vector\+Xd initial\+Value, double max\+Time, int step\+Number)
+\item 
+void \mbox{\hyperlink{classODE_1_1OdeSolver_a9410c85bc61707bd2b0ccf6e575b8c5f}{initilize}} (Eigen\+::\+Vector\+Xd initial\+Value, double step\+Size)
+\item 
+void \mbox{\hyperlink{classODE_1_1OdeSolver_a25386da82d047956226f5b366f36ead8}{set\+Dynamics}} (std\+::function$<$ Eigen\+::\+Vector\+Xd(double, Eigen\+::\+Vector\+Xd)$>$ F)
+\item 
+void \mbox{\hyperlink{classODE_1_1OdeSolver_a32eaa6cc7975a9e15faf73ec03b7f572}{solve}} (Eigen\+::\+Vector\+Xd initial\+Value, double max\+Time, int step\+Number)
+\item 
+void \mbox{\hyperlink{classODE_1_1OdeSolver_adc59b7ead56779e625138f334229b370}{advance}} ()
+\item 
+void \mbox{\hyperlink{classODE_1_1OdeSolver_ac766ba00b92441cc7cfe8b37f0ec9ef0}{clear}} ()
+\item 
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classODE_1_1OdeSolver_a53712a99a5282ac30c53c9016bc540ae}{get\+State}} ()
+\item 
+std\+::vector$<$ Eigen\+::\+Vector\+Xd $>$ \mbox{\hyperlink{classODE_1_1OdeSolver_a5916469dc1fa28d9ff57e59f6c603a58}{get\+Solution}} ()
+\end{DoxyCompactItemize}
+\subsection*{Korumalı Üye Fonksiyonlar}
+\begin{DoxyCompactItemize}
+\item 
+virtual Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classODE_1_1OdeSolver_a000187013258d0b43ffd8a14486e7ab8}{update\+Function}} ()
+\end{DoxyCompactItemize}
+\subsection*{Korumalı Özellikler(attribute)}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classODE_1_1OdeSolver_ad9390e79a11b90c8db069c6beabcf490}{n\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Durum yöneyi boyu. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classODE_1_1OdeSolver_a4ffcef8db6eccfb52a0dc75d5bba721b}{step\+Size\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Öd adımı boyu. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classODE_1_1OdeSolver_a936afe9d8e5fef88dfba926a9d7144d2}{current\+Time\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Çözümün o anki öd. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classODE_1_1OdeSolver_a9a3f37006f576b0e7bd056a8e59a0f9e}{time\+Step\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Çözümün o anki öd adımı \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classODE_1_1OdeSolver_aa369dcd06b4e9c92c31caa164f95a3fc}{max\+Time\+Step\+\_\+}}
+\begin{DoxyCompactList}\small\item\em En üst öd adım sayısı \end{DoxyCompactList}\item 
+std\+::vector$<$ Eigen\+::\+Vector\+Xd $>$ \mbox{\hyperlink{classODE_1_1OdeSolver_a47fbd5c42d4b5142f5d3a910a9b86144}{solution\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Çözüm yöneyi, hesaplanan durum yöneyleri eklenir. \end{DoxyCompactList}\item 
+std\+::function$<$ Eigen\+::\+Vector\+Xd(double, Eigen\+::\+Vector\+Xd)$>$ \mbox{\hyperlink{classODE_1_1OdeSolver_a806b1ad1f9109867796a035423227831}{F\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Değişim denklemi. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Dokümantasyonu}
+\mbox{\Hypertarget{classODE_1_1OdeSolver_a8a1e1a4d7d4eec40090e95a40f0da601}\label{classODE_1_1OdeSolver_a8a1e1a4d7d4eec40090e95a40f0da601}} 
+\index{ODE::OdeSolver@{ODE::OdeSolver}!OdeSolver@{OdeSolver}}
+\index{OdeSolver@{OdeSolver}!ODE::OdeSolver@{ODE::OdeSolver}}
+\subsubsection{\texorpdfstring{OdeSolver()}{OdeSolver()}}
+{\footnotesize\ttfamily O\+D\+E\+::\+Ode\+Solver\+::\+Ode\+Solver (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A\+TD çözücü yapıcısı \mbox{\Hypertarget{classODE_1_1OdeSolver_a40eb1af84fe4849368b7957f33eee14c}\label{classODE_1_1OdeSolver_a40eb1af84fe4849368b7957f33eee14c}} 
+\index{ODE::OdeSolver@{ODE::OdeSolver}!````~OdeSolver@{$\sim$OdeSolver}}
+\index{````~OdeSolver@{$\sim$OdeSolver}!ODE::OdeSolver@{ODE::OdeSolver}}
+\subsubsection{\texorpdfstring{$\sim$OdeSolver()}{~OdeSolver()}}
+{\footnotesize\ttfamily O\+D\+E\+::\+Ode\+Solver\+::$\sim$\+Ode\+Solver (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+A\+TD çözücü yıkıcısı 
+
+\subsection{Üye Fonksiyon Dokümantasyonu}
+\mbox{\Hypertarget{classODE_1_1OdeSolver_adc59b7ead56779e625138f334229b370}\label{classODE_1_1OdeSolver_adc59b7ead56779e625138f334229b370}} 
+\index{ODE::OdeSolver@{ODE::OdeSolver}!advance@{advance}}
+\index{advance@{advance}!ODE::OdeSolver@{ODE::OdeSolver}}
+\subsubsection{\texorpdfstring{advance()}{advance()}}
+{\footnotesize\ttfamily void O\+D\+E\+::\+Ode\+Solver\+::advance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A\+TD çözücüyü bir öd adımı boyu ilerletir. İşbu yordam solve yordamı içinde kullanılmaktadır. Çözücünün adım adım çalıştırılmak istenmesini olasılığı için açık bir yordamdır. \mbox{\Hypertarget{classODE_1_1OdeSolver_ac766ba00b92441cc7cfe8b37f0ec9ef0}\label{classODE_1_1OdeSolver_ac766ba00b92441cc7cfe8b37f0ec9ef0}} 
+\index{ODE::OdeSolver@{ODE::OdeSolver}!clear@{clear}}
+\index{clear@{clear}!ODE::OdeSolver@{ODE::OdeSolver}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void O\+D\+E\+::\+Ode\+Solver\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Çözüm yöneyini yalnızca son öğesi kalacak biçimde siler \mbox{\Hypertarget{classODE_1_1OdeSolver_a5916469dc1fa28d9ff57e59f6c603a58}\label{classODE_1_1OdeSolver_a5916469dc1fa28d9ff57e59f6c603a58}} 
+\index{ODE::OdeSolver@{ODE::OdeSolver}!getSolution@{getSolution}}
+\index{getSolution@{getSolution}!ODE::OdeSolver@{ODE::OdeSolver}}
+\subsubsection{\texorpdfstring{getSolution()}{getSolution()}}
+{\footnotesize\ttfamily std\+::vector$<$ Eigen\+::\+Vector\+Xd $>$ O\+D\+E\+::\+Ode\+Solver\+::get\+Solution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Bütün çözüm yöneylerini geri döner \begin{DoxyReturn}{Döndürdüğü değer}
+\{ Çözüm yöneyleri = \mbox{[} Durum\+\_\+yöneyi\mbox{[}0\mbox{]}, Durum\+\_\+yöneyi\mbox{[}1\mbox{]} ,..,Öd\+\_\+yöneyi \mbox{]} \} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classODE_1_1OdeSolver_a53712a99a5282ac30c53c9016bc540ae}\label{classODE_1_1OdeSolver_a53712a99a5282ac30c53c9016bc540ae}} 
+\index{ODE::OdeSolver@{ODE::OdeSolver}!getState@{getState}}
+\index{getState@{getState}!ODE::OdeSolver@{ODE::OdeSolver}}
+\subsubsection{\texorpdfstring{getState()}{getState()}}
+{\footnotesize\ttfamily Eigen\+::\+Vector\+Xd O\+D\+E\+::\+Ode\+Solver\+::get\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+En Son durumu yöneyini geri döner \begin{DoxyReturn}{Döndürdüğü değer}
+\{ Durum yöneyi = \mbox{[}Durum + öd\mbox{]} \} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classODE_1_1OdeSolver_a70787647e9c8637197d5c442b7655a05}\label{classODE_1_1OdeSolver_a70787647e9c8637197d5c442b7655a05}} 
+\index{ODE::OdeSolver@{ODE::OdeSolver}!initilize@{initilize}}
+\index{initilize@{initilize}!ODE::OdeSolver@{ODE::OdeSolver}}
+\subsubsection{\texorpdfstring{initilize()}{initilize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void O\+D\+E\+::\+Ode\+Solver\+::initilize (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector\+Xd}]{initial\+Value,  }\item[{double}]{max\+Time,  }\item[{int}]{step\+Number }\end{DoxyParamCaption})}
+
+Türevsel denklemin başlangıç değerlerini, çözüm süresini ve adım sayısı düzenler. Solve yordamı çalıştırıldığında bu yordam çalıştırılmış olur. 
+\begin{DoxyParams}{Parametreler}
+{\em \mbox{[}initial\+Value\mbox{]}} & \\
+\hline
+{\em \mbox{[}max\+Time\mbox{]}} & \\
+\hline
+{\em \mbox{[}step\+Number\mbox{]}} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classODE_1_1OdeSolver_a9410c85bc61707bd2b0ccf6e575b8c5f}\label{classODE_1_1OdeSolver_a9410c85bc61707bd2b0ccf6e575b8c5f}} 
+\index{ODE::OdeSolver@{ODE::OdeSolver}!initilize@{initilize}}
+\index{initilize@{initilize}!ODE::OdeSolver@{ODE::OdeSolver}}
+\subsubsection{\texorpdfstring{initilize()}{initilize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void O\+D\+E\+::\+Ode\+Solver\+::initilize (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector\+Xd}]{initial\+Value,  }\item[{double}]{step\+Size }\end{DoxyParamCaption})}
+
+Türevsel denklemin başlangıç değerlerini ve adım boyunu düzenler. Çalışma süresi belli olmadığı zaman kullanılır. Solve yordamı çalıştırıldığında bu yordam çalıştırılmış olur. 
+\begin{DoxyParams}{Parametreler}
+{\em \mbox{[}initial\+Value\mbox{]}} & \\
+\hline
+{\em \mbox{[}step\+Size\mbox{]}} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classODE_1_1OdeSolver_a25386da82d047956226f5b366f36ead8}\label{classODE_1_1OdeSolver_a25386da82d047956226f5b366f36ead8}} 
+\index{ODE::OdeSolver@{ODE::OdeSolver}!setDynamics@{setDynamics}}
+\index{setDynamics@{setDynamics}!ODE::OdeSolver@{ODE::OdeSolver}}
+\subsubsection{\texorpdfstring{setDynamics()}{setDynamics()}}
+{\footnotesize\ttfamily void O\+D\+E\+::\+Ode\+Solver\+::set\+Dynamics (\begin{DoxyParamCaption}\item[{std\+::function$<$ Eigen\+::\+Vector\+Xd(double, Eigen\+::\+Vector\+Xd)$>$}]{F }\end{DoxyParamCaption})}
+
+Türevsel denklemi A\+TD çözücü içine yerleştirir. 
+\begin{DoxyParams}{Parametreler}
+{\em \mbox{[}\+F\mbox{]}} & Türevsel denklem \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classODE_1_1OdeSolver_a32eaa6cc7975a9e15faf73ec03b7f572}\label{classODE_1_1OdeSolver_a32eaa6cc7975a9e15faf73ec03b7f572}} 
+\index{ODE::OdeSolver@{ODE::OdeSolver}!solve@{solve}}
+\index{solve@{solve}!ODE::OdeSolver@{ODE::OdeSolver}}
+\subsubsection{\texorpdfstring{solve()}{solve()}}
+{\footnotesize\ttfamily void O\+D\+E\+::\+Ode\+Solver\+::solve (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector\+Xd}]{initial\+Value,  }\item[{double}]{max\+Time,  }\item[{int}]{step\+Number }\end{DoxyParamCaption})}
+
+Türevsel denklemi tek kezde çözer. 
+\begin{DoxyParams}{Parametreler}
+{\em \mbox{[}initial\+Value\mbox{]}} & \\
+\hline
+{\em \mbox{[}max\+Time\mbox{]}} & \\
+\hline
+{\em \mbox{[}step\+Number\mbox{]}} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classODE_1_1OdeSolver_a000187013258d0b43ffd8a14486e7ab8}\label{classODE_1_1OdeSolver_a000187013258d0b43ffd8a14486e7ab8}} 
+\index{ODE::OdeSolver@{ODE::OdeSolver}!updateFunction@{updateFunction}}
+\index{updateFunction@{updateFunction}!ODE::OdeSolver@{ODE::OdeSolver}}
+\subsubsection{\texorpdfstring{updateFunction()}{updateFunction()}}
+{\footnotesize\ttfamily Eigen\+::\+Vector\+Xd O\+D\+E\+::\+Ode\+Solver\+::update\+Function (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+O anki durum yöneyi değişimini hesaplar \begin{DoxyReturn}{Döndürdüğü değer}
+\{\} 
+\end{DoxyReturn}
+
+
+Şu üyeler tarafından yeniden tanımlanmıştır \+: \mbox{\hyperlink{classODE_1_1RungeKutta_a545126adbad4dcf9294cc2623117edab}{O\+D\+E\+::\+Runge\+Kutta}}, \mbox{\hyperlink{classODE_1_1Euler_a8d8ea2d464ecbbcc7258eaf660f57903}{O\+D\+E\+::\+Euler}} ve \mbox{\hyperlink{classODE_1_1EulerModified_af318a33aabefccbf08f079d1d1600112}{O\+D\+E\+::\+Euler\+Modified}}.
+
+
+
+\subsection{Üye Veri Dokümantasyonu}
+\mbox{\Hypertarget{classODE_1_1OdeSolver_a936afe9d8e5fef88dfba926a9d7144d2}\label{classODE_1_1OdeSolver_a936afe9d8e5fef88dfba926a9d7144d2}} 
+\index{ODE::OdeSolver@{ODE::OdeSolver}!currentTime\_@{currentTime\_}}
+\index{currentTime\_@{currentTime\_}!ODE::OdeSolver@{ODE::OdeSolver}}
+\subsubsection{\texorpdfstring{currentTime\_}{currentTime\_}}
+{\footnotesize\ttfamily double O\+D\+E\+::\+Ode\+Solver\+::current\+Time\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Çözümün o anki öd. 
+
+\mbox{\Hypertarget{classODE_1_1OdeSolver_a806b1ad1f9109867796a035423227831}\label{classODE_1_1OdeSolver_a806b1ad1f9109867796a035423227831}} 
+\index{ODE::OdeSolver@{ODE::OdeSolver}!F\_@{F\_}}
+\index{F\_@{F\_}!ODE::OdeSolver@{ODE::OdeSolver}}
+\subsubsection{\texorpdfstring{F\_}{F\_}}
+{\footnotesize\ttfamily std\+::function$<$Eigen\+::\+Vector\+Xd(double,Eigen\+::\+Vector\+Xd)$>$ O\+D\+E\+::\+Ode\+Solver\+::\+F\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Değişim denklemi. 
+
+\mbox{\Hypertarget{classODE_1_1OdeSolver_aa369dcd06b4e9c92c31caa164f95a3fc}\label{classODE_1_1OdeSolver_aa369dcd06b4e9c92c31caa164f95a3fc}} 
+\index{ODE::OdeSolver@{ODE::OdeSolver}!maxTimeStep\_@{maxTimeStep\_}}
+\index{maxTimeStep\_@{maxTimeStep\_}!ODE::OdeSolver@{ODE::OdeSolver}}
+\subsubsection{\texorpdfstring{maxTimeStep\_}{maxTimeStep\_}}
+{\footnotesize\ttfamily int O\+D\+E\+::\+Ode\+Solver\+::max\+Time\+Step\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+En üst öd adım sayısı 
+
+\mbox{\Hypertarget{classODE_1_1OdeSolver_ad9390e79a11b90c8db069c6beabcf490}\label{classODE_1_1OdeSolver_ad9390e79a11b90c8db069c6beabcf490}} 
+\index{ODE::OdeSolver@{ODE::OdeSolver}!n\_@{n\_}}
+\index{n\_@{n\_}!ODE::OdeSolver@{ODE::OdeSolver}}
+\subsubsection{\texorpdfstring{n\_}{n\_}}
+{\footnotesize\ttfamily int O\+D\+E\+::\+Ode\+Solver\+::n\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Durum yöneyi boyu. 
+
+\mbox{\Hypertarget{classODE_1_1OdeSolver_a47fbd5c42d4b5142f5d3a910a9b86144}\label{classODE_1_1OdeSolver_a47fbd5c42d4b5142f5d3a910a9b86144}} 
+\index{ODE::OdeSolver@{ODE::OdeSolver}!solution\_@{solution\_}}
+\index{solution\_@{solution\_}!ODE::OdeSolver@{ODE::OdeSolver}}
+\subsubsection{\texorpdfstring{solution\_}{solution\_}}
+{\footnotesize\ttfamily std\+::vector$<$Eigen\+::\+Vector\+Xd$>$ O\+D\+E\+::\+Ode\+Solver\+::solution\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Çözüm yöneyi, hesaplanan durum yöneyleri eklenir. 
+
+\mbox{\Hypertarget{classODE_1_1OdeSolver_a4ffcef8db6eccfb52a0dc75d5bba721b}\label{classODE_1_1OdeSolver_a4ffcef8db6eccfb52a0dc75d5bba721b}} 
+\index{ODE::OdeSolver@{ODE::OdeSolver}!stepSize\_@{stepSize\_}}
+\index{stepSize\_@{stepSize\_}!ODE::OdeSolver@{ODE::OdeSolver}}
+\subsubsection{\texorpdfstring{stepSize\_}{stepSize\_}}
+{\footnotesize\ttfamily double O\+D\+E\+::\+Ode\+Solver\+::step\+Size\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Öd adımı boyu. 
+
+\mbox{\Hypertarget{classODE_1_1OdeSolver_a9a3f37006f576b0e7bd056a8e59a0f9e}\label{classODE_1_1OdeSolver_a9a3f37006f576b0e7bd056a8e59a0f9e}} 
+\index{ODE::OdeSolver@{ODE::OdeSolver}!timeStep\_@{timeStep\_}}
+\index{timeStep\_@{timeStep\_}!ODE::OdeSolver@{ODE::OdeSolver}}
+\subsubsection{\texorpdfstring{timeStep\_}{timeStep\_}}
+{\footnotesize\ttfamily int O\+D\+E\+::\+Ode\+Solver\+::time\+Step\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Çözümün o anki öd adımı 
+
+
+
+Bu sınıf için dokümantasyon aşağıdaki dosyalardan üretilmiştir\+:\begin{DoxyCompactItemize}
+\item 
+ode\+\_\+solver/include/ode\+\_\+solver/\mbox{\hyperlink{OdeSolver_8h}{Ode\+Solver.\+h}}\item 
+ode\+\_\+solver/src/\mbox{\hyperlink{OdeSolver_8cpp}{Ode\+Solver.\+cpp}}\end{DoxyCompactItemize}
