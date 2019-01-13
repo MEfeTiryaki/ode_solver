@@ -1,3 +1,11 @@
+/*
+File name: pendulum_test.cpp
+Author: Mehmet Efe Tiryaki
+E-mail: m.efetiryaki@gmail.com
+Date created: 21.12.2018
+Date last modified: 13.1.2019
+*/
+//! @example
 
 
 #include <iostream>

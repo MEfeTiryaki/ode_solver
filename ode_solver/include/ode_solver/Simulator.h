@@ -21,33 +21,87 @@ namespace ODE {
 class Simulator
 {
  public:
+  /** \~turkish
+
+      \~english
+  */
   Simulator();
+  /** \~turkish
+
+      \~english
+  */
   virtual ~Simulator();
 
-  /** Initilize the simulation with the given ode solver
-
+  /** \~turkish
+      @param[solver]
+      \~english
+      @param[solver]
   */
   void initilize(ODE::OdeSolver* solver);
 
-  /** Starts simulation with constant simulation time
+  /** \~turkish
+
+      @param[initialValue]
+      @param[maxTime]
+      @param[stepNumber]
+      \~english
+
+      @param[initialValue]
+      @param[maxTime]
+      @param[stepNumber]
   */
   void start(Eigen::VectorXd initialValue, double maxTime, int stepNumber);
 
-  /** Starts simulation with infinite time
+  /** \~turkish
+
+      @param[initialValue]
+      @param[stepSize]
+      \~english
+      @param[initialValue]
+      @param[stepSize]
   */
   void start(Eigen::VectorXd initialValue, double stepSize);
 
+  /** TODO : check if this should be protected
+      \~turkish
+
+      \~english
+  */
   void solve();
 
+  /** \~turkish
+      @param[id]
 
+      \return
+      \~english
+      @param[initialValue]
+
+      \return
+  */
   std::vector<double> getBuffer(int id);
 
+  /** \~turkish
+      @param[stop]
+
+      \~english
+      @param[stop]
+  */
   void setStop(bool stop);
 
+  /** \~turkish
+      @param[factor]
+
+      \~english
+      @param[factor]
+  */
   void setRealTimeFactor(double factor){
     realTimeFactor_ = factor;
   }
 
+  /** \~turkish
+
+      \~english
+  */
   void clearBuffer();
 
  protected:
