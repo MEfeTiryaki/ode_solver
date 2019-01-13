@@ -1,5 +1,5 @@
 # Ode Solver
-English version is below
+English version is [below](https://github.com/MEfeTiryaki/ode_solver/tree/master#english-version)
 
 Adi Türevsel denklem çözücü sınıfı. 
 
